@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+
+import Editor from './pages/editor';
+import TensileDiv from './components/TensileDiv';
+
 import './App.less';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <div className="App-menu">
+          i 
+        </div>
+        <TensileDiv defaultWidth={200}>
+          <div style={{ height: 500 }}>
+          test 
+          </div>
+        </TensileDiv>
+        <div className="App-content">
+          <Switch>
+            <Route path="/">
+              <Editor />
+            </Route>
+          </Switch>
+        </div>
+        
+      </div>
+    </BrowserRouter>
   );
 }
 

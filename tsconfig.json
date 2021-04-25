@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@muya/*": ["muya/*"]
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -18,6 +23,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "strictNullChecks": false,
     "jsx": "preserve"
   },
   "include": [
